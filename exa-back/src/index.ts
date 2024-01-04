@@ -7,7 +7,13 @@ const prisma = new PrismaClient();
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: "https://eye-rs53.onrender.com/api",
+    optionsSuccessStatus: 200, //
+  })
+);
 app.use(express.json());
 
 app.post("/api", async (req, res) => {
