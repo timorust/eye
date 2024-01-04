@@ -5,7 +5,7 @@ import path from "path";
 
 const prisma = new PrismaClient();
 const app = express();
-const PORT = 5000;
+const PORT = "https://eye-rs53.onrender.com/";
 
 app.use(cors());
 app.use(express.json());
