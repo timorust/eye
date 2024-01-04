@@ -35,15 +35,15 @@ function Home() {
           <div className={styles.success}>Form sended!</div>
         ) : (
           <>
-            <h1>Ophthalmologist - leave a request</h1>
+            <h1>Dr. Jamil Hasanov PhD - National Eye Centre</h1>
             <input
               type="name"
-              placeholder="Enter please name:"
+              placeholder="Please enter a name:"
               {...register("name")}
             />
             <input
               type="email"
-              placeholder="Enter please email:"
+              placeholder="Please enter email:"
               {...register("email")}
             />
             <button disabled={isLoading}>
