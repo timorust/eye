@@ -1,6 +1,7 @@
 import express from "express";
 import { PrismaClient } from "@prisma/client";
 import cors from "cors";
+import path from "path";
 
 const prisma = new PrismaClient();
 const app = express();
@@ -25,6 +26,12 @@ app.post("/api", async (req, res) => {
   }
 });
 
-const server = app.listen(PORT, () => {
-  console.log(`Listening on ${PORT}`);
+app.use(express.static(path.join(__dirname, "/build-front")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/build-front/index.html"));
+});
+
+const server = app.listen(process?.env?.PORT ?? 5000, () => {
+  console.log(`Listening on ` + process?.env?.PORT ?? 5000);
 });
