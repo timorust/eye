@@ -13,7 +13,7 @@ function Home() {
 
   const onSubmit: SubmitHandler<IFormState> = (data) => {
     setIsLoading(true);
-    fetch("http://localhost:5000/api", {
+    fetch("https://eye-rs53.onrender.com/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
