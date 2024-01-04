@@ -32,10 +32,10 @@ app.post("/api", async (req, res) => {
   }
 });
 
-app.use(express.static(path.join(__dirname, "/build-front")));
+app.use(express.static(path.join(__dirname, "../build-front")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/build-front/index.html"));
+  res.sendFile(path.join(__dirname, "../build-front/index.html"));
 });
 
 const server = app.listen(process?.env?.PORT ?? 5000, () => {
