@@ -35,7 +35,7 @@ function Home() {
           <div className={styles.success}>Form sended!</div>
         ) : (
           <>
-            <h1>Dr. Jamil Hasanov PhD - National Eye Centre</h1>
+            <h1>Dr. Jamil Hasanov PhD</h1>
             <input
               type="name"
               placeholder="Please enter a name:"
