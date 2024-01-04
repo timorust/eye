@@ -5,6 +5,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "../exa-back/build-front",
+    outDir: "../../exa-back/build-front",
   },
 });
